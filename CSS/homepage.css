@@ -1,0 +1,46 @@
+/* ------------------ HERO ----------------- */
+
+main img{
+    width: 75vw;
+    height: auto;
+    position: relative;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   background-color: var(--card);
+   text-align: center; 
+   border-radius: 20px;
+   width: 35vw;/*what is this default, I like the setting*/
+   height: 20vh;
+   position: absolute;
+   bottom: 1vh;
+   padding: 2vh 3vw 10vh 3vw;
+}
+
+.overlay p{
+    /* padding-top: 0.5vh; */
+    background-color: orange;
+    width: 75%;
+    font-size: 20px;
+}
+
+h1{
+    font-size:  48px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: pink 1px solid;
+}
+
+.hero-btns{
+    display: flex;
+    border: solid pink 1px;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    /* padding-top: 1vh; */
+}
+
+/* ------------------ HERO ----------------- */
