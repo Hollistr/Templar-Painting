@@ -1,0 +1,140 @@
+:root{
+    --white: #FFFFFF;
+    --text-main: black;
+    --card: #d9d9d9;
+    --accent-red: #b73838;
+    --head-foot: #b79b99;
+
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.red-btn{
+    background-color: var(--accent-red);
+    border-radius: 20px;
+    color: white;
+    padding: 5px 15px;
+    /* filter: drop-shadow(.5em .5em 1em gray); */
+
+}
+
+
+/* ------------ HEADER ---------- */
+
+header{
+    background-color: var(--head-foot);
+    width: 100vw;
+}
+
+.header-content {
+    padding: 0 12.5vw;
+    display: flex;
+    border: solid 2px peru;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-width: 125px;
+}
+
+.logoTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: pink solid 1px;
+}
+
+.title-text{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1vw;
+}
+
+.nav-btns {
+    width: 30vw;
+    border: 1px palevioletred solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+.contact-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------ HEADER ---------- */
+
+body{
+    display: flex;
+    flex-direction: column;
+    /* width: 75%; how can i make content centered within 75% of screen? */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid pink;
+}
+
+/* ------------------ HERO ----------------- */
+
+main img{
+    /* width: 100vw; */
+    height: auto;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   background-color: var(--card);
+   text-align: center; 
+   border-radius: 20px;
+   width: 40vw;
+   height: 20vh;
+   position: relative;
+   bottom: 30vh;
+   padding: 5vh 2.5vw;
+}
+
+.overlay p{
+    margin-top: 0;
+    background-color: orange;
+
+
+}
+
+h1{
+    margin-bottom: 10px;
+    border: pink 1px solid;
+}
+
+.hero-btns{
+    display: flex;
+    border: solid pink 1px;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+/* ------------------ HERO ----------------- */
+
+footer {
+width: 100vw;
+background-color: var(--head-foot);
+}
