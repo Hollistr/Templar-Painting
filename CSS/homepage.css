@@ -1,7 +1,7 @@
 /* ------------------ HERO ----------------- */
 
 main img{
-    width: 75vw;
+    width: 60vw;
     height: auto;
     position: relative;
 }
@@ -13,30 +13,29 @@ main img{
    background-color: var(--card);
    text-align: center; 
    border-radius: 20px;
-   width: 35vw;/*what is this default, I like the setting*/
+   width: 30vw;/*what is this default, I like the setting*/
    height: 20vh;
    position: absolute;
-   bottom: 1vh;
-   padding: 2vh 3vw 10vh 3vw;
+   bottom: 23%;
+   padding: 25px;
 }
 
 .overlay p{
     /* padding-top: 0.5vh; */
-    background-color: orange;
     width: 75%;
-    font-size: 20px;
+    font-size: 18px;
+    padding-top: 0;
 }
 
 h1{
-    font-size:  48px;
-    margin-bottom: 10px;
+    font-size:  36px;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    border: pink 1px solid;
 }
 
 .hero-btns{
     display: flex;
-    border: solid pink 1px;
     justify-content: space-between;
     align-items: center;
     width: 50%;
@@ -44,3 +43,20 @@ h1{
 }
 
 /* ------------------ HERO ----------------- */
+
+.card-container{
+    width: 100%;
+    margin: 10vh 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card);
+    border-radius: 20px;
+    width: 20vw;
+    height: 25vh;
+}

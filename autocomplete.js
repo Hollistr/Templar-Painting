@@ -28,10 +28,10 @@ function initMap() {
   
     infowindow.setContent(infowindowContent);
   
-    const marker = new google.maps.Marker({
-      map,
-      anchorPoint: new google.maps.Point(0, -29),
-    });
+
+    let templarPainting = {lat: 33.61434973532014, lng: -111.8809844247393};
+
+   let marker = new google.maps.Marker({position: templarPainting, map: map});
   
     autocomplete.addListener("place_changed", () => {
       infowindow.close();

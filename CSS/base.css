@@ -5,7 +5,7 @@
     --accent-red: #b73838;
     --head-foot: #b79b99;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
   }
 
 a {
@@ -22,23 +22,32 @@ strong{
     background-color: var(--accent-red);
     border-radius: 20px;
     color: white;
-    padding: 5px 15px;
+    padding: 10px 15px;
+    cursor: pointer;
     /* filter: drop-shadow(.5em .5em 1em gray); */
 
 }
 
+.black-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 7px 15px;
+    cursor: pointer;
+}
 
 /* ------------ HEADER ---------- */
 
 header{
     background-color: var(--head-foot);
     width: 100vw;
+    border-radius: 0 0 5px 5px;
 }
 
 .header-content {
     padding: 0 12.5vw;
     display: flex;
-    border: solid 2px peru;
     justify-content: space-between;
     align-items: center;
 }
@@ -51,21 +60,29 @@ header img {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: pink solid 1px;
 }
 
 .title-text{
     display: flex;
     flex-direction: column;
     padding-left: 1vw;
+    text-align: left;
 }
 
+
+.title-text a{
+    font-weight: 500;
+    font-size: 25px; 
+}
+
+#ron{
+    font-size: 12px;
+}
 .nav-btns {
     width: 30vw;
-    border: 1px palevioletred solid;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 
 
@@ -85,19 +102,59 @@ body{
     /* width: 75%; how can i make content centered within 75% of screen? */
     justify-content: center;
     align-items: center;
-    
+    min-height: 100vh;
+    margin: 0;
 }
 
 main{
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
-    border: 1px solid pink;
+    width: 100%;
 }
 
-
+/* ----------- footer -------- */ 
 
 footer {
 width: 100vw;
 background-color: var(--head-foot);
+border-radius: 5px 5px 0 0;
+}
+
+.footer-content{
+    display: flex;
+    width: 75vw;
+    margin: 0 12.5vw;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.foot-nav-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.foot-nav-container a{
+    padding: 3px 0;
+}
+
+.mid-foot-el{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.logo-foot{
+    height: auto;
+    width: 4vw;
+}
+
+.card-info-foot{
+    text-align: right;
 }
