@@ -43,8 +43,8 @@
         <dialog role="dialog" id="modal">
             <button id="close-modal" method="dialog">X</button> <!-- may change this to the swords with the x as an img tag-->
             <div class="pac-card" id="pac-card">
-                <div>
-                  <div id="title">Autocomplete search</div>
+                <!-- <div> -->
+                  <!-- <div id="title">Autocomplete search</div>
                   <div id="type-selector" class="pac-controls">
                     <input
                       type="radio"
@@ -64,19 +64,21 @@
                     <input type="radio" name="type" id="changetype-regions" />
                     <label for="changetype-regions">(regions)</label>
                   </div>
-                  <br />
-                  <div id="strict-bounds-selector" class="pac-controls">
+                  <br /> -->
+                  <!-- <div id="strict-bounds-selector" class="pac-controls">
                     <input type="checkbox" id="use-location-bias" value="" checked />
                     <label for="use-location-bias">Bias to map viewport</label>
                     <input type="checkbox" id="use-strict-bounds" value="" />
                     <label for="use-strict-bounds">Strict bounds</label>
                   </div>
-                </div>
-                <div id="pac-container">
+                </div> -->
+                <!-- <div id="pac-container">
                   <input id="pac-input" type="text" placeholder="Enter a location" />
+                </div> -->
+                <!-- </div> -->
+                <div id="modal-map" >
+                    <div id="map"></div>
                 </div>
-                </div>
-                <div id="map"></div>
                 <div id="infowindow-content">
                 <span id="place-name" class="title"></span><br />
                 <span id="place-address"></span>
@@ -110,6 +112,40 @@
         </div>
     </div>
     </footer>
-    <script src="../Script/modal.js"></script>
+    <!-- <script src="../Script/modal.js"></script> -->
+    <script>
+        const modalMap = document.querySelector("#map");
+        function initMap(){
+      let templarPainting = {lat: 33.61434973532014, lng: -111.8809844247393};
+      let map = new google.maps.Map(
+          document.getElementById(`map`), {zoom: 11, center: templarPainting}
+      );
+      let marker = new google.maps.Marker({position: templarPainting, map: map});
+    //   console.log(map);
+    //   modalMap.appendChild(map) = map;
+      window.initMap = initMap;
+        }
+        
+      </script>
+      <script>const modal = document.querySelector("#modal");
+        const openModal = document.querySelector("#open-modal");
+        const closeModal = document.querySelector("#close-modal");
+        
+        openModal.addEventListener('click', () => {
+            modal.showModal();
+            initMap();
+        });
+        
+        closeModal.addEventListener('click', () => {
+            modal.close();
+        });</script>
+        <!-- <script>
+            (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+              key: "AIzaSyCFihhAI0UI6IyGAU-tyv8gWsowzV6bXBQ",
+              // Add other bootstrap parameters as needed, using camel case.
+              // Use the 'v' parameter to indicate the version to load (alpha, beta, weekly, etc.)
+            });
+          </script> -->
+       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFihhAI0UI6IyGAU-tyv8gWsowzV6bXBQ&callback=initMap&libraries=places&v=weekly" defer></script>
 </body>
 </html>

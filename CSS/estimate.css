@@ -17,48 +17,109 @@ body{
   min-height: 100vh;
 }
 
+main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* ------------- form ----------------- */
+
 .estimate-container{
-  margin: 0 auto;
-  width: 80%;
+  /* width: 20vw; */
+  background-color: var(--card);
+  border-radius: 20px;
+  padding: 15px;
+  /* margin-top: 5%;
+  margin-right: 40%;
+  margin-bottom: 7%; */
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container{
+  display: flex;
+  /* flex-direction: column;
+  height: 100%; */
+  
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+form *{
+  margin-top: 10%;
+}
+
+
+textarea {
+  width: 300px;
+  height: 150px;
+}
+
+/* ------------- form ----------------- */
+
+
+/* --------- begin content boxes --------- */
+
+#two-boxes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60vh;
+  
+}
+
+/* --------- contact info box --------- */
+#contact-box{
+  background-color: var(--accent-red);
+  border-radius: 20px;
+  /* position: absolute; */
+  width: 25vw;
+  height: 25vh;
+  /* top: 20%;
+  right: 15%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+#contact-box-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+  font-size: 14px;
+  /* width: 80%;
+  height: 80%; */
 }
 
 /* --------- contact info box --------- */
 
-#contact-box{
-  background-color: var(--accent-red);
-  border-radius: 20px;
-  position: absolute;
-  width: 25vw;
-  height: 25vh;
-  top: 20%;
-  right: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#contact-box p{
-  text-align: center;
-  font-size: 14px;
- 
-}
 
 /* ----------- MAP ----------------------- */
+
+#map-container{
+  position: relative;
+  background-color: pink;
+  border-radius: 20px;
+  height: 25vh;
+  width: 25vw;
+}
 
 #map {
   background-color: var(--head-foot);
   border-radius: 20px;
+  position: absolute;
   height: 25vh;
   width: 25vw;
-  position: relative;
-  left: 50vw;
-  top: 33vh;
+ 
 }
-/*
- * Optional: Makes the sample page fill the window.
- */
-
-
 
 #description {
   font-family: Roboto;
@@ -119,3 +180,16 @@ body{
 } */
 
 /* ----------- MAP ----------------------- */
+
+/* ---------- Mobile View --------- */
+
+/* @media (max-width: 800px){
+  #contact-box{
+    display: none;
+  }
+  
+  #map{
+    display: none;
+  }
+} */
+
