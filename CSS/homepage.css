@@ -60,3 +60,19 @@ h1{
     width: 20vw;
     height: 25vh;
 }
+
+
+#modal-map{
+    overflow: visible;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#map{
+    overflow: visible;
+    position: relative;
+    height: 30vh;
+    width: 30vw;
+}
